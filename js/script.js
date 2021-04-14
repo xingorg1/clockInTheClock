@@ -246,12 +246,15 @@ window.onload = function () {
     innerText(len, sentence)
     setInterval(() => {
         innerText(len, sentence)
-    }, 5000)
+    }, 1000 * 30)
     // 设置全屏
     fullScreen = document.getElementById('fullScreen')
     exitFullScreen = document.getElementById('exitFullScreen')
     fullScreen.addEventListener('click', fullScreenHandle, false)
     exitFullScreen.addEventListener('click', exitFullscreenHandle, false)
+    // 设置年月日 .toLocaleString() || .toJson()
+    let dateBox = document.getElementById('date')
+    dateBox.innerText = new Date().toLocaleDateString().replace(/\//g, '.')
 }
 
 //监听window是否全屏，并进行相应的操作,支持esc键退出

@@ -7,12 +7,21 @@ body {
   overflow: hidden;
   background-color: #FF6D63;
   transition: background 1s linear;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .box {
-  transform: translateY(-100px);
+  transform: translateY(-50px);
   transform-origin: center;
   text-align: center;
+}
+div#date {
+  transform: translateY(100px);
+  font-size: 58px;
+  color: #fff;
 }
 
 div#sentence {
@@ -35,10 +44,6 @@ div#sentence {
   /* letter-spacing: 5px; */
   font-size: 12px;
   opacity: 0.75;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   border: 1px solid #fff;
   border-radius: 5px;
   transition: opacity 0.35s linear;
@@ -52,7 +57,7 @@ div#sentence {
 }
 
 .clock {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   transform: scale(2.5);
 }
