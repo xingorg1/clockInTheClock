@@ -245,7 +245,7 @@ window.onload = function () {
     let sentence = document.getElementById('sentence')
     innerText(len, sentence)
     setInterval(() => {
-        // innerText(len, sentence)
+        innerText(len, sentence)
     }, 5000)
     // 设置全屏
     fullScreen = document.getElementById('fullScreen')
