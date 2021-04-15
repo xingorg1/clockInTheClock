@@ -231,16 +231,20 @@ function exitFullscreenHandle() {
     screenFull = false
     toggle(screenFull)
 }
-let screenFull = false,
-    fullScreen = null,
-    exitFullScreen = null
-window.onload = function () {
-    // 设置背景色
+function changeColorHandle() {
     let random = parseInt(Math.random() * 360),
         random_warm = Math.abs(Math.floor(Math.random() * (175 - 0)) + 0),
         random_cool = Math.abs(Math.floor(Math.random() * (360 - 175)) + 175)
     document.body.style.backgroundColor = `hsl(${random}deg 100% 69%)`
     document.body.style.backgroundImage = `linear-gradient(${random}deg, hsl(${random_warm}deg 100% 69%), hsl(${random_cool}deg 100% 69%))`
+
+}
+let screenFull = false,
+    fullScreen = null,
+    exitFullScreen = null
+window.onload = function () {
+    // 设置背景色
+    changeColorHandle()
     // 设置文案
     let sentence = document.getElementById('sentence')
     innerText(len, sentence)
@@ -255,6 +259,9 @@ window.onload = function () {
     // 设置年月日 .toLocaleString() || .toJson()
     let dateBox = document.getElementById('date')
     dateBox.innerText = new Date().toLocaleDateString().replace(/\//g, '.')
+    // 换肤功能
+    changeColor = document.getElementById('changeColor')
+    changeColor.addEventListener('click', changeColorHandle, false)
 }
 
 //监听window是否全屏，并进行相应的操作,支持esc键退出

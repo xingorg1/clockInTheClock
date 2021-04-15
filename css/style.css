@@ -14,7 +14,7 @@ body {
 }
 
 .box {
-  transform: translateY(-50px);
+  transform: translateY(-30px);
   transform-origin: center;
   text-align: center;
 }
