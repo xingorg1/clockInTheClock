@@ -87,7 +87,7 @@ function toggle(isFull) {
 var Flipper = /** @class */ (function () {
     function Flipper(node, currentTime, nextTime) {
         this.isFlipping = false;
-        this.duration = 600;
+        this.duration = 500;
         this.flipNode = node;
         this.frontNode = node.querySelector(".front");
         this.backNode = node.querySelector(".back");
