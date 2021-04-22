@@ -23,3 +23,14 @@ mac 已安装的插件源码路径: </Users/用户名/Library/ApplicationSupport
     <li><a href="https://developer.chrome.com/extensions/match_patterns" target="_blank">模糊匹配规则语法详解</a></li>
   </ul>
 </details>
+
+## vue3
+### setup
+新的 setup 组件选项在创建组件之前执行(可以理解在beforeCreated前创建)
+
+在执行 setup 时，组件实例尚未被创建。在 setup 选项中 this 指向window了（不指向实例，可以说没有this），也就不能访问data状态、方法、计算属性
+
+setup参数有props、context
+
+### ref
+一个引用。感觉就像是把变量用{value: xxx}包装一层，然后进行浅拷贝引用，达到响应式的目的。
