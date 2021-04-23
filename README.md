@@ -25,6 +25,7 @@ mac 已安装的插件源码路径: </Users/用户名/Library/ApplicationSupport
 </details>
 
 ## vue3
+写的过程中有一个感悟，总是先把需求想成vue2的写法，再转换成vue3的写法。
 ### setup
 新的 setup 组件选项在创建组件之前执行(可以理解在beforeCreated前创建)
 
